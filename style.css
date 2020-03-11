@@ -1,6 +1,25 @@
 header {
     background-color: #240000;
 }
+
 nav ul a {
     color: #f7941d;
+}
+
+#header-img {
+    position: relative;
+    transform: rotate(-15deg);
+    z-index: -1;
+    margin: 0 auto;
+}
+
+/* #button-container {
+    width: 60%;
+} */
+
+@media screen and (max-width: 768px) {
+    .btn-lg {
+        padding: .375rem .75rem;
+        font-size: 1rem;
+    }
 }
