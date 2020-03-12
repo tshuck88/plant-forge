@@ -27,7 +27,7 @@ nav ul a {
     }
 }
 
-#how-it-works {
+.content-container {
     margin-top: 10%;
     background-color: white;
 }
