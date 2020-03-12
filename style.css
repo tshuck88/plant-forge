@@ -34,7 +34,7 @@ nav ul a {
 
 #top-shaped {
     float: left;
-    height: 100%;
+    height: 37vh;
     width: 50%;
     shape-outside: polygon(0 0, 100% 0, 0 100%)
 }
@@ -47,7 +47,7 @@ nav ul a {
 
 #bottom-shaped {
     float: right;
-    height: 100%;
+    height: 37vh;
     width: 50%;
     shape-outside: polygon(100% 100%, 0 100%, 100% 0)
 }
@@ -58,3 +58,9 @@ nav ul a {
     left: 20%;
     transform: rotate(-32.96deg);
 }
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
