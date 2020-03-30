@@ -12,7 +12,16 @@ body {
     background-color: whitesmoke;
 }
 
-header,
+/* header {
+    background: url("images/SVG/Asset\ 8.svg") no-repeat center;
+    background-size: cover;
+} */
+
+/* header img {
+    object-fit: cover;
+    overflow: hidden;
+} */
+
 footer {
     background-color: #240000;
 }
@@ -33,7 +42,15 @@ nav ul a:hover {
     margin: 0 auto;
 }
 
+.btn {
+    background-color:#f7941d;
+    border-color:#f7941d;
+    color: #ef4136;
+}
 
+.btn:hover{
+    color: white;
+}
 @media screen and (max-width: 768px) {
     .btn-lg {
         padding: .375rem .75rem;
@@ -86,7 +103,7 @@ footer {
     height: 50px;
     position: absolute;
     bottom: 0;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 footer p {
