@@ -42,6 +42,13 @@ nav ul a:hover {
     margin: 0 auto;
 }
 
+#logo-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 115px;
+}
+
 .btn {
     background-color:#f7941d;
     border-color:#f7941d;
