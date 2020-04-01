@@ -13,13 +13,38 @@ body {
 }
 
 header {
-    max-height: 50px;
+    max-height: 62.5px;
 }
 
-header, footer {
+header,
+footer {
     background-color: #240000;
 }
 
+nav {
+    position: relative;
+    bottom: 215px;
+}
+
+#navbarSupportedContent{
+    width: 100%;
+}
+/* #nav-left,
+#nav-right {
+    display: inline-block;
+} */
+
+#nav-left {
+    float: left;
+}
+
+#nav-right {
+    float: right;
+}
+
+.navbar-toggler {
+    z-index: 1200;
+}
 
 nav ul a {
     color: #f7941d;
@@ -130,11 +155,22 @@ footer p {
     .w720 {
         display: block;
     }
+
+    #nav-left,
+    #nav-right {
+        width: 245px;
+    }
+
 }
 
 @media screen and (min-width: 721px) and (max-width: 800px) {
     .w800 {
         display: block;
+    }
+
+    #nav-left,
+    #nav-right {
+        width: 319px;
     }
 }
 
@@ -142,11 +178,21 @@ footer p {
     .w940 {
         display: block;
     }
+
+    #nav-left,
+    #nav-right {
+        width: 367px;
+    }
 }
 
 @media screen and (min-width: 941px) and (max-width: 1080px) {
     .w1080 {
         display: block;
+    }
+
+    #nav-left,
+    #nav-right {
+        width: 367px;
     }
 }
 
@@ -154,11 +200,21 @@ footer p {
     .w1080 {
         display: block;
     }
+
+    #nav-left,
+    #nav-right {
+        width: 435px;
+    }
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1440px) {
     .w1440 {
         display: block;
+    }
+
+    #nav-left,
+    #nav-right {
+        width: 490px;
     }
 }
 
@@ -166,4 +222,10 @@ footer p {
     .w1920 {
         display: block;
     }
+
+    #nav-left,
+    #nav-right {
+        width: 650px;
+    }
+
 }
