@@ -26,64 +26,17 @@ nav {
     bottom: 215px;
 }
 
-#navbarSupportedContent{
+#navbarSupportedContent {
     width: 100%;
     justify-content: space-between;
 
 }
-/* #nav-left,
-#nav-right {
-    display: inline-block;
-} */
 
-/* #nav-left {
-    float: left;
-}
-
-#nav-right {
-    float: right;
-} */
-
-#nav-icon3 span:nth-child(1) {
-    top: 0px;
-  }
-  
-  #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
-    top: 18px;
-  }
-  
-  #nav-icon3 span:nth-child(4) {
-    top: 36px;
-  }
-  
-  #nav-icon3.open span:nth-child(1) {
-    top: 18px;
-    width: 0%;
-    left: 50%;
-  }
-  
-  #nav-icon3.open span:nth-child(2) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  
-  #nav-icon3.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-  
-  #nav-icon3.open span:nth-child(4) {
-    top: 18px;
-    width: 0%;
-    left: 50%;
-  }
-
-.navbar-toggler {
-    z-index: 1200;
+#hamburger div {
+    width: 35px;
+    height: 5px;
+    background-color: #f7941d;
+    margin: 6px 0;
 }
 
 nav ul a {
@@ -196,10 +149,10 @@ footer p {
         display: block;
     }
 
-    #nav-left,
+    /* #nav-left,
     #nav-right {
         width: 245px;
-    }
+    } */
 
 }
 
@@ -208,10 +161,10 @@ footer p {
         display: block;
     }
 
-    #nav-left,
+    /* #nav-left,
     #nav-right {
         width: 319px;
-    }
+    } */
 }
 
 @media screen and (min-width: 801px) and (max-width: 940px) {
@@ -219,16 +172,19 @@ footer p {
         display: block;
     }
 
-    #nav-left,
+    /* #nav-left,
     #nav-right {
         width: 367px;
-    }
+    } */
 }
 
 @media screen and (min-width: 941px) and (max-width: 1080px) {
     .w1080 {
         display: block;
     }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1080px) {
 
     #nav-left,
     #nav-right {
@@ -268,4 +224,22 @@ footer p {
         width: 650px;
     }
 
+}
+
+/* Media Query For Nav Drop Down Menu */
+@media screen and (max-width: 991px) {
+    .navbar-collapse ul {
+        display: block;
+    }
+
+    .nav-fill .nav-item {
+        text-align: start;
+    }
+
+    #navbarSupportedContent {
+        border: 1px solid #f7941d;
+        width: fit-content;
+        background-color: #240000;
+        margin-top: 3px;
+    }
 }
