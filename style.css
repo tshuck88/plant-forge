@@ -16,7 +16,6 @@ header {
     max-height: 62.5px;
 }
 
-header,
 footer {
     background-color: #240000;
 }
@@ -132,50 +131,85 @@ footer p {
     color: #f7941d;
 }
 
+#logo {
+    height: 100px;
+}
+
 .w1920,
 .w1440,
 .w1280,
 .w1080,
 .w940,
 .w800,
-.w720 {
+.w720,
+.w640,
+.w560,
+.w470,
+.w380,
+.w320 {
     display: none;
 }
 
 /* Media Queries For SVG Header */
+@media screen and (max-width: 640px){
+    #logo {
+        height: 75px;
+    }
+    nav {
+        bottom: 190px;
+    }
 
-@media screen and (min-width: 640px) and (max-width: 720px) {
+    #navbarSupportedContent {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .w320 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 380px) {
+    .w380 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 381px) and (max-width: 470px) {
+    .w470 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 471px) and (max-width: 560px) {
+    .w560 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 561px) and (max-width: 640px) {
+    .w640 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 720px) {
     .w720 {
         display: block;
     }
-
-    /* #nav-left,
-    #nav-right {
-        width: 245px;
-    } */
-
 }
 
 @media screen and (min-width: 721px) and (max-width: 800px) {
     .w800 {
         display: block;
     }
-
-    /* #nav-left,
-    #nav-right {
-        width: 319px;
-    } */
 }
 
 @media screen and (min-width: 801px) and (max-width: 940px) {
     .w940 {
         display: block;
     }
-
-    /* #nav-left,
-    #nav-right {
-        width: 367px;
-    } */
 }
 
 @media screen and (min-width: 941px) and (max-width: 1080px) {
