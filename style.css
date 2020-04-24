@@ -44,9 +44,16 @@ nav ul a:hover {
 
 #header-img {
     position: relative;
-    transform: rotate(-15deg);
+    bottom: 100px;
+    transform: rotate(60deg);
     z-index: -1;
     margin: 0 auto;
+    height: 950px;
+}
+
+#button-container {
+    position: relative;
+    bottom: 250px;
 }
 
 .logo-container {
