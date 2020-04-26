@@ -125,6 +125,7 @@ nav ul a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background: url("images/PNG/image3.png") repeat;
     background-size: auto 50px;
     width: 100%;
