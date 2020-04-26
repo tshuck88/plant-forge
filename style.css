@@ -48,7 +48,7 @@ nav ul a:hover {
     transform: rotate(60deg);
     z-index: -1;
     margin: 0 auto;
-    height: 950px;
+    width: 50%;
 }
 
 #button-container {
@@ -98,8 +98,10 @@ nav ul a:hover {
 
 #top-shaped img {
     position: relative;
-    right: 13%;
-    transform: rotate(-32.96deg);
+    right: 5%;
+    bottom: 25%;
+    width: 400px;
+    /* transform: rotate(-32.96deg); */
 }
 
 #bottom-shaped {
@@ -111,9 +113,26 @@ nav ul a:hover {
 
 #bottom-shaped img {
     position: relative;
-    top: 45%;
-    left: 20%;
-    transform: rotate(-32.96deg);
+    top: 11%;
+    left: 34%;
+    width: 400px;
+    /* transform: rotate(-32.96deg); */
+}
+
+
+
+#spatial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("images/PNG/image3.png") repeat;
+    background-size: auto 50px;
+    width: 100%;
+    height: 150px;
+}
+
+#spatial-content, #how-it-works {
+    margin-top: 2%;
 }
 
 .clearfix::after {
