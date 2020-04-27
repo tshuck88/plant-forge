@@ -9,7 +9,7 @@ body {
     margin: 0 0 125px;
     padding: 0 0 25px;
     height: 100%;
-    background-color: whitesmoke;
+    background-color: rgb(39, 39, 39);
 }
 
 header {
@@ -85,7 +85,7 @@ nav ul a:hover {
 }
 
 .content-container {
-    margin-top: 10%;
+    margin-top: 15%;
     background-color: white;
 }
 
@@ -130,6 +130,7 @@ nav ul a:hover {
     background-size: auto 50px;
     width: 100%;
     height: 150px;
+    color: white;
 }
 
 #spatial-content, #how-it-works {
