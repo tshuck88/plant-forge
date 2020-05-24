@@ -9,7 +9,7 @@ body {
     margin: 0 0 125px;
     padding: 0 0 25px;
     height: 100%;
-    background-color: rgb(39, 39, 39);
+    background-color: #414042;
     font-family: "Oswald", serif;
 }
 
@@ -44,12 +44,9 @@ nav ul a:hover {
 }
 
 #header-img {
-    position: relative;
-    bottom: 100px;
-    transform: rotate(60deg);
     z-index: -1;
     margin: 0 auto;
-    width: 50%;
+    width: 35%;
 }
 
 #button-container {
@@ -72,6 +69,7 @@ nav ul a:hover {
     background-color: #f7941d;
     border-color: #f7941d;
     color: #ef4136;
+    font-weight: 600;
 }
 
 .btn:hover {
