@@ -160,6 +160,14 @@ nav ul a:hover {
     shape-outside: polygon(0 0, 100% 100%, 100% 0)
 }
 
+#content-image-3 {
+    height: 250px;
+    transform: scale(1.4) rotate(-4deg);
+    position: relative;
+    top: 10px;
+    right: 45px;
+}
+
 .clearfix::after {
     content: "";
     clear: both;
