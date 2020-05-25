@@ -137,6 +137,14 @@ nav ul a:hover {
     margin-top: 2%;
 }
 
+#content-image-1 {
+    height: 250px;
+    transform: scale(1.3);
+    position: relative;
+    top: 30px;
+    right: 45px;
+}
+
 .clearfix::after {
     content: "";
     clear: both;
