@@ -154,7 +154,7 @@ nav ul a:hover {
     bottom: 105px;
 }
 
-#image-shaped-right {
+#image2-shape {
     float: right;
     width: 31%;
     shape-outside: polygon(0 0, 100% 100%, 100% 0)
@@ -166,6 +166,21 @@ nav ul a:hover {
     position: relative;
     top: 10px;
     right: 45px;
+}
+
+#content-image-4 {
+    height: 300px;
+    transform: scale(2.0);
+    position: relative;
+    bottom: 75px;
+    right: 15px;
+}
+
+#image4-shape {
+    float: right;
+    height: 100%;
+    width: 31%;
+    shape-outside: polygon(0 0, 100% 100%, 100% 0)
 }
 
 .clearfix::after {
