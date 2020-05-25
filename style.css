@@ -59,6 +59,11 @@ nav ul a:hover {
     width: 35%;
 }
 
+#header-text {
+    position: relative;
+    bottom: 90px;
+}
+
 #button-container {
     position: relative;
     bottom: 250px;
@@ -189,6 +194,19 @@ nav ul a:hover {
     position: relative;
     right: 20px;
     bottom: 15px;
+}
+
+#content-image-6 {
+    height: 200px;
+    transform: scale(2.3) rotate(-10deg);
+    position: relative;
+    bottom: 80px;
+    left: 10px;
+}
+
+#image6-shape {
+    float: right;
+    width: 25%;
 }
 
 .clearfix::after {
