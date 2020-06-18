@@ -57,6 +57,8 @@ nav ul a:hover {
     z-index: -1;
     margin: 0 auto;
     width: 35%;
+    height: auto;
+    display: block;
 }
 
 #header-text {
