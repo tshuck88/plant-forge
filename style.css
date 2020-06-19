@@ -71,6 +71,10 @@ nav ul a:hover {
     bottom: 250px;
 }
 
+#button-container button {
+    margin: 0 auto;
+}
+
 .logo-container {
     display: flex;
     justify-content: center;
@@ -396,4 +400,40 @@ footer p {
         background-color: #240000;
         margin-top: 3px;
     }
+}
+
+/* Media Queries for Content Images */
+@media screen and (max-width: 1441px){
+
+    #content-image-2 {
+        transform: scale(1.5) rotate(-32deg);
+    }
+    
+}
+
+@media screen and (max-width: 1367px){
+
+    #content-image-2 {
+        transform: scale(1.4) rotate(-32deg);
+        right: 10px;
+    }
+    
+    #content-image-6 {
+        transform: scale(2.2) rotate(-10deg);
+    }
+}
+
+@media screen and (max-width: 1199px){
+
+    #button-container {
+        bottom: 220px;
+    }
+
+    #content-image-1 {
+        top: 0px;
+    }
+    #content-image-2 {
+        transform: scale(1.5) rotate(-32deg);
+    }
+    
 }
