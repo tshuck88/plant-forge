@@ -450,8 +450,18 @@ footer p {
     #content-image-1 {
         top: 0px;
     }
+
     #content-image-2 {
         transform: scale(1.4) rotate(-32deg);
+        right: 0px;
     }
     
+    #content-image-5 {
+        bottom: 50px;
+    }
+
+    #content-image-6 {
+        transform: scale(1.8) rotate(-10deg);
+        bottom: -10px;
+    }
 }
