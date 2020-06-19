@@ -465,3 +465,37 @@ footer p {
         bottom: -10px;
     }
 }
+
+@media screen and (max-width: 1025px){
+
+    #content-image-1 {
+        transform: scale(1.1);
+        top: -30px;
+    }
+
+    #content-image-2 {
+        transform: scale(1.1) rotate(-32deg);
+        right: 34px;
+    }
+
+    #content-image-3 {
+        transform: scale(1.2) rotate(-4deg);
+        top: 0px;
+        right: 0px;
+    }
+
+    #content-image-4 {
+        transform: scale(1.6);
+        right: 25px;
+        bottom: 60px;
+    }
+    
+    #content-image-5 {
+        transform: scale(1.4) rotate(-13deg);
+    }
+
+    #content-image-6 {
+        transform: scale(1.6) rotate(-10deg);
+        left: -20px;
+    }
+}
