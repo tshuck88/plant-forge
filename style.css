@@ -466,7 +466,7 @@ footer p {
     }
 }
 
-@media screen and (max-width: 1081px){
+@media screen and (max-width: 1025px){
 
     #content-image-1 {
         transform: scale(1.1);
