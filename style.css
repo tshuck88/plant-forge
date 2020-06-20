@@ -612,7 +612,6 @@ footer p {
 
     #image4-shape {
         height: 45%;
-        width: 45%;
     }
 
     #content-image-4 {
@@ -628,5 +627,51 @@ footer p {
     #content-image-6 {
         transform: scale(1.2) rotate(-10deg);
         left: 8px;
+    }
+}
+
+@media screen and (max-width: 481px) {
+
+    .content-container {
+        overflow: hidden;
+    }
+
+    #header-img {
+        width: 40%;
+    }
+    
+    #button-container {
+        bottom: 95px;
+    }
+
+    #content-image-1 {
+        height: 160px;
+    }
+
+    #content-image-2 {
+        right: -14px;
+    }
+
+    #content-image-3 {
+        height: 200px;
+    }
+
+    #image4-shape {
+        height: 40%;
+    }
+
+    #content-image-4 {
+        height: 260px;
+        right: -10px;
+        bottom: 45px;
+    }
+
+    #content-image-5 {
+        transform: scale(1) rotate(-13deg);
+    }
+
+    #content-image-6 {
+        transform: scale(1) rotate(-10deg);
+        left: 13px;
     }
 }
