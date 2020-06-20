@@ -585,3 +585,48 @@ footer p {
         left: -10px;
     }
 }
+
+@media screen and (max-width: 601px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #header-text {
+        bottom: 45px;
+    }
+
+    #content-image-1 {
+        height: 200px;
+    }
+
+    #content-image-2 {
+        height: 225px;
+        right: 0px;
+        bottom: 76px;
+    }
+
+    #content-image-3 {
+        height: 230px;
+        transform: scale(1) rotate(-4deg);
+    }
+
+    #image4-shape {
+        height: 45%;
+        width: 45%;
+    }
+
+    #content-image-4 {
+        transform: scale(1);
+        bottom: 65px;
+    }
+
+    #content-image-5 {
+        transform: scale(1.2) rotate(-13deg);
+        bottom: 30px;
+    }
+
+    #content-image-6 {
+        transform: scale(1.2) rotate(-10deg);
+        left: 8px;
+    }
+}
