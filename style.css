@@ -97,13 +97,6 @@ nav ul a:hover {
     color: white;
 }
 
-@media screen and (max-width: 768px) {
-    .btn-lg {
-        padding: .375rem .75rem;
-        font-size: 1rem;
-    }
-}
-
 .content-container {
     margin-top: 5%;
     background-color: #333132;
@@ -568,6 +561,12 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
+
+    .btn-lg {
+        padding: .375rem .75rem;
+        font-size: 1rem;
+    }
+
     #content-image-2 {
         height: 280px;
         transform: scale(1) rotate(-25deg);
@@ -673,5 +672,39 @@ footer p {
     #content-image-6 {
         transform: scale(1) rotate(-10deg);
         left: 13px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+
+    .btn-lg {
+        font-size: .8rem;
+    }
+
+    #header-text {
+        bottom: 0px;
+    }
+
+    #content-image-1 {
+        height: 120px;
+    }
+
+    #content-image-2 {
+        height: 197px;
+        bottom: 60px;
+    }
+
+    #content-image-3 {
+        height: 150px;
+    }
+
+    #content-image-4 {
+        height: 235px;
+        bottom: 38px;
+    }
+
+    #content-image-5 {
+        height: 180px;
+        right: 0px;
     }
 }
