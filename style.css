@@ -499,3 +499,53 @@ footer p {
         left: -20px;
     }
 }
+
+@media screen and (max-width: 991px) {
+
+    #header-img {
+        width: 45%
+    }
+
+    #button-container {
+        justify-content: space-between;
+    }
+
+    #button-container button {
+        margin: 0;
+    }
+
+    #content-image-1 {
+        transform: scale(1);
+        top: 0;
+        right: 0;
+    }
+
+    #content-image-2 {
+        right: 0;
+    }
+
+    #content-image-3 {
+        transform: scale(1.1) rotate(-4deg);
+        top: -20px;
+    }
+
+    #image4-shape {
+        height: 75%;
+        width: 45%;
+    }
+
+    #content-image-4 {
+        transform: scale(1.5);
+        right: -15px;
+        bottom: -15px;
+    }
+
+    #content-image-5 {
+        bottom: 15px;
+    }
+
+    #content-image-6 {
+        left: 0px;
+        bottom: 15px;
+    }
+}
