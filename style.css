@@ -749,3 +749,27 @@ footer p {
         left: 22px;
     }
 }
+
+@media screen and (max-width: 376px) {
+    #content-image-2 {
+        height: 155px;
+        right: -13px;
+    }
+
+    #image4-shape {
+        height: 18%;
+    }
+
+    #content-image-4 {
+        height: 180px;
+    }
+
+    #content-image-5 {
+        height: 155px;
+    }
+
+    #content-image-6 {
+        height: 145px;
+        left: 17px;
+    }
+}
