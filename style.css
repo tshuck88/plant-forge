@@ -24,7 +24,7 @@ nav {
 
 h1 {
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 p {
@@ -97,7 +97,7 @@ nav ul a:hover {
     bottom: 250px;
 }
 
-#button-container button {
+#button-container button, #button-container a {
     margin: 0 auto;
     width: 200px;
 }
@@ -474,6 +474,10 @@ footer p {
 
 @media screen and (max-width: 1199px) {
 
+    h1 {
+        font-size: 3rem;
+    }
+
     #button-container {
         bottom: 220px;
     }
@@ -559,7 +563,7 @@ footer p {
         justify-content: space-between;
     }
 
-    #button-container button {
+    #button-container button, #button-container a {
         margin: 0;
     }
 
@@ -639,7 +643,7 @@ footer p {
         font-size: 1rem;
     }
 
-    #button-container button {
+    #button-container button, #button-container a {
         width: 155px;
     }
 
@@ -760,7 +764,7 @@ footer p {
         bottom: 15px;
     }
 
-    #button-container button {
+    #button-container button, #button-container a {
         width: 129px;
     }
 
@@ -830,7 +834,7 @@ footer p {
     #button-container {
         margin: 40px 0;
     }
-    
+
     #content-image-2 {
         height: 155px;
         right: -13px;
