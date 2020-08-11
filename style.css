@@ -74,6 +74,7 @@ nav ul a:hover {
 
 #button-container button {
     margin: 0 auto;
+    width: 200px;
 }
 
 .logo-container {
@@ -568,6 +569,10 @@ footer p {
         font-size: 1rem;
     }
 
+    #button-container button {
+        width: 155px;
+    }
+
     #content-image-2 {
         height: 280px;
         transform: scale(1) rotate(-25deg);
@@ -684,6 +689,10 @@ footer p {
 
     #button-container {
         bottom: 15px;
+    }
+    
+    #button-container button {
+        width: 129px;
     }
 
     #header-text {
