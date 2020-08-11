@@ -16,7 +16,8 @@ body {
     font-size: 1.5rem;
 }
 
-main {
+main,
+nav {
     max-width: 1920px;
     margin: 0 auto;
 }
@@ -68,7 +69,7 @@ nav ul a:hover {
     display: block;
 }
 
-#plant-forge-container{
+#plant-forge-container {
     display: flex;
     justify-content: space-between;
     margin: 0 20px -150px;
@@ -76,11 +77,13 @@ nav ul a:hover {
     top: 135px;
 }
 
-#plant-img1, #forge-img1 {
+#plant-img1,
+#forge-img1 {
     height: 150px;
 }
 
-#plant-img2, #forge-img2 {
+#plant-img2,
+#forge-img2 {
     display: none;
 }
 
@@ -427,7 +430,8 @@ footer p {
         transform: scale(1.5) rotate(-32deg);
     }
 
-    #plant-img1, #forge-img1 {
+    #plant-img1,
+    #forge-img1 {
         height: 125px;
     }
 
@@ -446,8 +450,9 @@ footer p {
 }
 
 @media screen and (max-width: 1281px) {
-    
-    #plant-img1, #forge-img1 {
+
+    #plant-img1,
+    #forge-img1 {
         height: 100px;
     }
 
@@ -494,7 +499,8 @@ footer p {
 
 @media screen and (max-width: 1025px) {
 
-    #plant-img1, #forge-img1 {
+    #plant-img1,
+    #forge-img1 {
         height: 75px;
     }
 
@@ -594,6 +600,23 @@ footer p {
 }
 
 @media screen and (max-width: 801px) {
+
+    #plant-forge-container {
+        display: none;
+    }
+
+    #button-container {
+        bottom: 0px;
+        margin: 40px 20px;
+    }
+
+    #plant-img2,
+    #forge-img2 {
+        display: block;
+        margin: 10px auto;
+        height: 100px;
+    }
+
     #content-image-2 {
         transform: scale(1) rotate(-32deg);
         right: 14px;
@@ -631,7 +654,7 @@ footer p {
         transform: scale(1.3);
         right: 0px;
     }
-    
+
 
     #content-image-6 {
         left: -10px;
@@ -680,6 +703,11 @@ footer p {
 
 @media screen and (max-width: 481px) {
 
+    #plant-img2,
+    #forge-img2 {
+        height: 75px;
+    }
+
     .content-container {
         overflow: hidden;
     }
@@ -687,10 +715,8 @@ footer p {
     #header-img {
         width: 40%;
     }
-    
-    #button-container {
-        bottom: 95px;
-    }
+
+
 
     #content-image-1 {
         height: 160px;
@@ -733,7 +759,7 @@ footer p {
     #button-container {
         bottom: 15px;
     }
-    
+
     #button-container button {
         width: 129px;
     }
@@ -799,7 +825,12 @@ footer p {
     }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 320px) {
+
+    #button-container {
+        margin: 40px 0;
+    }
+    
     #content-image-2 {
         height: 155px;
         right: -13px;
