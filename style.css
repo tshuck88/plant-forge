@@ -3,6 +3,7 @@ html {
     padding: 0;
     position: relative;
     min-height: 100%;
+    scroll-padding-top: 125px;
 }
 
 body {
