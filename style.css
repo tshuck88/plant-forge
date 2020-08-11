@@ -16,6 +16,11 @@ body {
     font-size: 1.5rem;
 }
 
+main {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
 h1 {
     font-weight: 600;
     font-size: 3rem;
@@ -63,9 +68,24 @@ nav ul a:hover {
     display: block;
 }
 
+#plant-forge-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px -150px;
+    position: relative;
+    top: 135px;
+}
+
+#plant-img1, #forge-img1 {
+    height: 150px;
+}
+
+#plant-img2, #forge-img2 {
+    display: none;
+}
+
 #header-text {
     position: relative;
-    bottom: 90px;
     font-size: 2rem;
 }
 
@@ -140,7 +160,7 @@ nav ul a:hover {
     max-width: 100vw;
     position: relative;
     right: 50%;
-    width: 100vw;
+    width: 99.5vw;
 }
 
 #spatial-content,
@@ -407,6 +427,10 @@ footer p {
         transform: scale(1.5) rotate(-32deg);
     }
 
+    #plant-img1, #forge-img1 {
+        height: 125px;
+    }
+
 }
 
 @media screen and (max-width: 1367px) {
@@ -422,6 +446,10 @@ footer p {
 }
 
 @media screen and (max-width: 1281px) {
+    
+    #plant-img1, #forge-img1 {
+        height: 100px;
+    }
 
     #content-image-2 {
         transform: scale(1.3) rotate(-32deg);
@@ -466,6 +494,14 @@ footer p {
 
 @media screen and (max-width: 1025px) {
 
+    #plant-img1, #forge-img1 {
+        height: 75px;
+    }
+
+    #plant-forge-container {
+        top: 95px;
+    }
+
     #content-image-1 {
         transform: scale(1.1);
         top: -30px;
@@ -506,7 +542,6 @@ footer p {
 
     #header-text {
         position: relative;
-        bottom: 90px;
         font-size: 1.5rem;
     }
 
@@ -608,10 +643,6 @@ footer p {
         font-size: 2.5rem;
     }
 
-    #header-text {
-        bottom: 45px;
-    }
-
     #content-image-1 {
         height: 200px;
     }
@@ -705,10 +736,6 @@ footer p {
     
     #button-container button {
         width: 129px;
-    }
-
-    #header-text {
-        bottom: 0px;
     }
 
     #content-image-1 {
