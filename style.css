@@ -53,12 +53,16 @@ nav {
     margin: 6px 0;
 }
 
-nav ul a {
+nav ul a, #cart-icon2 {
     color: #f7941d;
 }
 
-nav ul a:hover {
+nav ul a:hover, #cart-icon2:hover {
     color: white;
+}
+
+#cart-icon2 {
+    display: none;
 }
 
 #header-img {
@@ -413,7 +417,7 @@ footer p {
 }
 
 /* Media Query For Nav Drop Down Menu */
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1199px) {
     .navbar-collapse ul {
         display: block;
     }
@@ -427,6 +431,16 @@ footer p {
         width: fit-content;
         background-color: #240000;
         margin-top: 3px;
+    }
+
+    #cart-icon1 {
+        display: none;
+    }
+
+    #cart-icon2 {
+        display: block;
+        float: right;
+        margin: 10px;
     }
 }
 
