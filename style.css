@@ -918,5 +918,9 @@ footer p {
 .card-footer {
     padding: 0 1.25rem .75rem;
     border: 0;
-    background-color: white;
+    background-color: #333132;
+}
+
+.card {
+    background-color: #333132;
 }
