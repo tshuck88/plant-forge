@@ -87,6 +87,12 @@ nav ul a:hover {
     display: none;
 }
 
+#uspp {
+    height: 40px;
+    display: block;
+    margin: 0 auto 40px;
+}
+
 #header-text {
     position: relative;
     font-size: 2rem;
@@ -97,7 +103,8 @@ nav ul a:hover {
     bottom: 250px;
 }
 
-#button-container button, #button-container a {
+#button-container button,
+#button-container a {
     margin: 0 auto;
     width: 200px;
 }
@@ -563,7 +570,8 @@ footer p {
         justify-content: space-between;
     }
 
-    #button-container button, #button-container a {
+    #button-container button,
+    #button-container a {
         margin: 0;
     }
 
@@ -638,12 +646,17 @@ footer p {
 
 @media screen and (max-width: 768px) {
 
+    #uspp {
+        height: 30px;
+    }
+
     .btn-lg {
         padding: .375rem .75rem;
         font-size: 1rem;
     }
 
-    #button-container button, #button-container a {
+    #button-container button,
+    #button-container a {
         width: 155px;
     }
 
@@ -707,6 +720,10 @@ footer p {
 
 @media screen and (max-width: 481px) {
 
+    #uspp {
+        height: 20px;
+    }
+
     #plant-img2,
     #forge-img2 {
         height: 75px;
@@ -764,7 +781,8 @@ footer p {
         bottom: 15px;
     }
 
-    #button-container button, #button-container a {
+    #button-container button,
+    #button-container a {
         width: 129px;
     }
 
