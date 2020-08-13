@@ -141,9 +141,11 @@ nav ul a:hover,
     font-weight: 600;
 }
 
+a {
+    color: #f7941d;
+}
 
-
-.btn:hover, #button-container a:hover {
+.btn:hover, a:hover {
     color: white;
     text-decoration: none;
 }
