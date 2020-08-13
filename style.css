@@ -951,3 +951,7 @@ footer p {
     margin: 15px 5px;
     border: 2px #f7941d solid;
 }
+
+.product-image-option:hover {
+    border: 2px black solid;
+}
