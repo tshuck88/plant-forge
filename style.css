@@ -933,3 +933,21 @@ footer p {
 .card {
     background-color: #333132;
 }
+
+/* Product Page Styles */
+
+.product-image-active {
+    display: block;
+    width: 400px;
+    background-color: white;
+    padding: 5px;
+    margin: 15px 5px;
+}
+
+.product-image-option {
+    background-color: white;
+    height: 100px;
+    padding: 5px;
+    margin: 15px 5px;
+    border: 2px #f7941d solid;
+}
