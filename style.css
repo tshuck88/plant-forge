@@ -967,3 +967,8 @@ footer p {
 .quantity-input {
     width: 75px;
 }
+
+.enlarged-image {
+    width: 400px;
+    max-width: 90vw;
+}
