@@ -955,3 +955,11 @@ footer p {
 .product-image-option:hover {
     border: 2px black solid;
 }
+
+.add-to-cart-button {
+    vertical-align: text-bottom;
+}
+
+.quantity-input {
+    width: 75px;
+}
