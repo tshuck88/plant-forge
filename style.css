@@ -768,6 +768,10 @@ footer p {
         overflow: hidden;
     }
 
+    .product-container {
+        overflow: inherit;
+    }
+
     #header-img {
         width: 40%;
     }
@@ -938,7 +942,6 @@ footer p {
 
 .product-image-active {
     display: block;
-    width: 400px;
     background-color: white;
     padding: 5px;
     margin: 15px 5px;
@@ -957,7 +960,8 @@ footer p {
 }
 
 .add-to-cart-button {
-    vertical-align: text-bottom;
+    vertical-align: top;
+    height: 42px;
 }
 
 .quantity-input {
