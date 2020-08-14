@@ -306,6 +306,63 @@ footer p {
     display: none;
 }
 
+/* Buy Plant Forge Page Styles */
+
+#card-container {
+    margin: 5% auto ;
+}
+
+.card-body {
+    padding: 1.25rem 1.25rem 0;
+}
+
+.card-footer {
+    padding: 0 1.25rem .75rem;
+    border: 0;
+    background-color: #333132;
+}
+
+.card {
+    background-color: #333132;
+}
+
+/* Product Page Styles */
+
+.product-image-active {
+    display: block;
+    background-color: white;
+    padding: 5px;
+    margin: 15px 5px;
+}
+
+.product-image-option {
+    background-color: white;
+    height: 100px;
+    padding: 5px;
+    margin: 15px 5px;
+    border: 2px #f7941d solid;
+}
+
+.product-image-option:hover {
+    border: 2px black solid;
+}
+
+.add-to-cart-button {
+    vertical-align: top;
+    height: 42px;
+}
+
+.quantity-input {
+    width: 75px;
+}
+
+.enlarged-image {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    max-width: 90vw;
+}
+
 /* Media Queries For SVG Header */
 @media screen and (max-width: 640px) {
 
@@ -641,6 +698,10 @@ footer p {
     #content-image-6 {
         left: 20px;
     }
+
+    .add-to-cart-button {
+        height: 36px;
+    }
 }
 
 @media screen and (max-width: 801px) {
@@ -918,59 +979,3 @@ footer p {
     }
 }
 
-/* Buy Plant Forge Page Styles */
-
-#card-container {
-    margin: 5% auto ;
-}
-
-.card-body {
-    padding: 1.25rem 1.25rem 0;
-}
-
-.card-footer {
-    padding: 0 1.25rem .75rem;
-    border: 0;
-    background-color: #333132;
-}
-
-.card {
-    background-color: #333132;
-}
-
-/* Product Page Styles */
-
-.product-image-active {
-    display: block;
-    background-color: white;
-    padding: 5px;
-    margin: 15px 5px;
-}
-
-.product-image-option {
-    background-color: white;
-    height: 100px;
-    padding: 5px;
-    margin: 15px 5px;
-    border: 2px #f7941d solid;
-}
-
-.product-image-option:hover {
-    border: 2px black solid;
-}
-
-.add-to-cart-button {
-    vertical-align: top;
-    height: 42px;
-}
-
-.quantity-input {
-    width: 75px;
-}
-
-.enlarged-image {
-    display: block;
-    margin: 0 auto;
-    width: 400px;
-    max-width: 90vw;
-}
