@@ -145,7 +145,8 @@ a {
     color: #f7941d;
 }
 
-.btn:hover, a:hover {
+.btn:hover,
+a:hover {
     color: white;
     text-decoration: none;
 }
@@ -309,7 +310,7 @@ footer p {
 /* Buy Plant Forge Page Styles */
 
 #card-container {
-    margin: 5% auto ;
+    margin: 5% auto;
 }
 
 .card-body {
@@ -328,14 +329,15 @@ footer p {
 
 /* Product Page Styles */
 
-.product-image-active {
+.main-product-image {
     display: block;
     background-color: white;
     padding: 5px;
     margin: 15px 5px;
 }
 
-.product-image-option {
+.product-image-option,
+.active-image {
     background-color: white;
     height: 100px;
     padding: 5px;
@@ -343,6 +345,7 @@ footer p {
     border: 2px #f7941d solid;
 }
 
+.active-image,
 .product-image-option:hover {
     border: 2px black solid;
 }
@@ -356,7 +359,7 @@ footer p {
     width: 75px;
 }
 
-.enlarged-image {
+.modal-image {
     display: block;
     margin: 0 auto;
     width: 400px;
@@ -978,4 +981,3 @@ footer p {
         left: 17px;
     }
 }
-
