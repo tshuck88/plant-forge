@@ -11,6 +11,7 @@ $(document).on("click", ".add-to-cart-button", function () {
     const cardTitle = $(this).parent().siblings(".card-body").find(".card-title").text();
     const productName = $(".product-title").text() || cardTitle;
     const quantityInput = $(".quantity-input").val();
+    const productImage = $(".cover-image").attr("src")
     let quantity;
 
     if (quantityInput !== undefined) {
@@ -21,7 +22,8 @@ $(document).on("click", ".add-to-cart-button", function () {
 
     const newProduct = {
         name: productName,
-        quantity: quantity
+        quantity: quantity,
+        image: productImage
     }
 
     let cart;
