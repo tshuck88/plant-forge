@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
@@ -47,11 +47,11 @@ $(document).ready(function () {
             if (findProduct.length === 0) {
                 arr.push(product);
             } else {
-                const cartItem = findProduct[0]
-                cartItem.quantity = parseInt(cartItem.quantity) + parseInt(product.quantity)
-                console.log(arr)
+                const cartItem = findProduct[0];
+                cartItem.quantity = parseInt(cartItem.quantity) + parseInt(product.quantity);
+                console.log(arr);
             }
-            sessionStorage.setItem("cart", JSON.stringify(arr))
+            sessionStorage.setItem("cart", JSON.stringify(arr));
         }
         checkCart(cart, newProduct)
 
@@ -61,36 +61,42 @@ $(document).ready(function () {
     //     return JSON.parse(sessionStorage.getItem("cart") || []);
     // }
 
-    const cartArray = JSON.parse(sessionStorage.getItem("cart")) || [];
-    console.log(cartArray)
+    // const cartArray = JSON.parse(sessionStorage.getItem("cart")) || [];
+    const cartArray = [{ name: "plant1", quantity: 4, image: "https://via.placeholder.com/150" }, { name: "plant2", quantity: 2, image: "https://via.placeholder.com/150" }];
+    console.log(cartArray);
+
+    function isCartEmpty() {
+        if (cartArray.length === 0) {
+            $(".table-responsive").css("display", "none");
+            $("#empty-cart").append("<h2>Your cart is currently empty</h2>");
+        }
+    }
 
     function displayCartItems() {
 
-        if (cartArray.length === 0) {
-            $(".table-responsive").css("display", "none");
-            $("#empty-cart").append("<h2>Your Cart is currently empty</h2>")
-        } else {
-            for (let i = 0; i < cartArray.length; i++) {
+        isCartEmpty();
 
-                const tr = $("<tr>");
-                const th = $('<th scope="row">');
-                const removeButton = $('<button type="button" class="btn remove-button">X</button>');
-                const tdImage = $('<img src="' + cartArray[i].image + '" class="cart-product-image">');
-                const tdTitle = $('<td class="cart-product-title">').text(cartArray[i].name);
-                const tdPrice = $('<td class="cart-product-price">').text(formatter.format(calculatePrice(cartArray[i].quantity)));
-                const tdQuantity = $('<td><input type="number" class="cart-product-quantity" value="' + cartArray[i].quantity + '">');
-                const tdTotal = $('<td class="cart-prouct-total">').text(formatter.format(calculateTotal(calculatePrice(cartArray[i].quantity), cartArray[i].quantity)));
+        for (let i = 0; i < cartArray.length; i++) {
 
-                th.append(removeButton);
-                tr.append(th);
-                tr.append(tdImage);
-                tr.append(tdTitle);
-                tr.append(tdPrice);
-                tr.append(tdQuantity);
-                tr.append(tdTotal);
-                $("#cart-table").append(tr);
-            }
+            const tr = $("<tr>");
+            const th = $('<th scope="row">');
+            const removeButton = $('<button type="button" class="btn remove-button">X</button>');
+            const tdImage = $('<img src="' + cartArray[i].image + '" class="cart-product-image">');
+            const tdTitle = $('<td class="cart-product-title">').text(cartArray[i].name);
+            const tdPrice = $('<td class="cart-product-price">').text(formatter.format(calculatePrice(cartArray[i].quantity)));
+            const tdQuantity = $('<td><input type="number" class="cart-product-quantity" value="' + cartArray[i].quantity + '">');
+            const tdTotal = $('<td class="cart-prouct-total">').text(formatter.format(calculateTotal(calculatePrice(cartArray[i].quantity), cartArray[i].quantity)));
+
+            th.append(removeButton);
+            tr.append(th);
+            tr.append(tdImage);
+            tr.append(tdTitle);
+            tr.append(tdPrice);
+            tr.append(tdQuantity);
+            tr.append(tdTotal);
+            $("#cart-table").append(tr);
         }
+
     }
 
     function calculatePrice(quantity) {
@@ -125,13 +131,17 @@ $(document).ready(function () {
 
     displayCartItems();
 
+    $(document).on("click", ".remove-button", function () {
+        const productName = $(this).parent().siblings(".cart-product-title").text();
+        const itemIndex = cartArray.findIndex(obj => obj.name === productName);
+        console.log(itemIndex);
+        cartArray.splice(itemIndex, 1);
+        console.log(cartArray)
+        $(this).parents("tr").remove();
+        sessionStorage.setItem("cart", JSON.stringify(cartArray));
+        isCartEmpty();
+    })
 
-
-    function deleteItem(item) {
-        const itemIndex = cartList.indexOf(item)
-        cartArray.splice(itemIndex, 1); // remove from stored array       
-        saveCart(cartArray); // save it back into storage
-    }
 
 })
 
