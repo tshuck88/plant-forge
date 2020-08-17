@@ -35,7 +35,7 @@ $(document).on("click", ".add-to-cart-button", function () {
     }
 
     function checkCart(arr, product) {
-        const findProduct = arr.filter(obj => { return obj.name === productName});
+        const findProduct = arr.filter(obj => { return obj.name === productName });
 
         if (findProduct.length === 0) {
             arr.push(product);
@@ -50,3 +50,28 @@ $(document).on("click", ".add-to-cart-button", function () {
     checkCart(cart, newProduct)
 
 });
+
+// function getCartItems() {
+//     return JSON.parse(sessionStorage.getItem("cart") || []);
+// }
+
+// const cartArray = getCartItems();
+
+// function displayCartItems() {
+//     const tr = $("<tr>");
+//     const th = $("<th scope='row'>");
+//     const removeButton = $("<button type='button' class='button'>X</button>");
+
+
+//     for (let i = 0; i < cartArray.length; i++) {
+
+//     }
+// }
+
+
+
+// function deleteItem(item) {
+//     const itemIndex = cartList.indexOf(item)
+//     cartArray.splice(itemIndex, 1); // remove from stored array       
+//     saveCart(cartArray); // save it back into storage
+// }

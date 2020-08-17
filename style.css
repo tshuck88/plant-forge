@@ -366,6 +366,24 @@ footer p {
     max-width: 90vw;
 }
 
+/* Cart Page Styles */
+
+.table {
+    color: #f7941d;
+}
+
+.table thead th, .table th, .table td {
+    border: none;
+}
+
+.cart-product-image {
+    height: 60px;
+}
+
+.cart-product-quantity {
+    width: 75px;
+}
+
 /* Media Queries For SVG Header */
 @media screen and (max-width: 640px) {
 
