@@ -384,6 +384,10 @@ footer p {
     width: 75px;
 }
 
+.proceed-to-checkout-button {
+    width: 100%;
+}
+
 /* Media Queries For SVG Header */
 @media screen and (max-width: 640px) {
 
