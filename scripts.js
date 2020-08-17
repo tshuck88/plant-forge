@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
 
     $(document).on("click", ".product-image-option", function () {
         const selectedImage = $(this);
@@ -14,7 +19,7 @@ $(document).ready(function () {
         const productName = $(".product-title").text(); // || cardTitle;
         const quantityInput = $(".quantity-input").val();
         const productImage = $(".cover-image").attr("src")
-        
+
         // let quantity;
         // if (quantityInput !== undefined) {
         //     quantity = quantityInput;
@@ -66,14 +71,15 @@ $(document).ready(function () {
             $("#empty-cart").append("<h2>Your Cart is currently empty</h2>")
         } else {
             for (let i = 0; i < cartArray.length; i++) {
+
                 const tr = $("<tr>");
                 const th = $('<th scope="row">');
                 const removeButton = $('<button type="button" class="btn remove-button">X</button>');
                 const tdImage = $('<img src="' + cartArray[i].image + '" class="cart-product-image">');
                 const tdTitle = $('<td class="cart-product-title">').text(cartArray[i].name);
-                const tdPrice = $('<td class="cart-product-price">');
+                const tdPrice = $('<td class="cart-product-price">').text(formatter.format(calculatePrice(cartArray[i].quantity)));
                 const tdQuantity = $('<td><input type="number" class="cart-product-quantity" value="' + cartArray[i].quantity + '">');
-                const tdTotal = $('<td class="cart-prouct-total">');
+                const tdTotal = $('<td class="cart-prouct-total">').text(formatter.format(calculateTotal(calculatePrice(cartArray[i].quantity), cartArray[i].quantity)));
 
                 th.append(removeButton);
                 tr.append(th);
@@ -82,12 +88,39 @@ $(document).ready(function () {
                 tr.append(tdPrice);
                 tr.append(tdQuantity);
                 tr.append(tdTotal);
-
-                $("#cart-table").append(tr)
+                $("#cart-table").append(tr);
             }
         }
+    }
 
+    function calculatePrice(quantity) {
+        let price;
 
+        switch (quantity) {
+            case quantity >= 10 && quantity < 20:
+                price = 35.95;
+                break;
+            case quantity >= 20 && quantity < 30:
+                price = 33.95;
+                break;
+            case quantity >= 30 && quantity < 50:
+                price = 31.95;
+                break;
+            case quantity >= 50 && quantity < 100:
+                price = 29.95;
+                break;
+            case quantity >= 100:
+                price = 37.95;
+                break;
+            default:
+                price = 37.95
+        }
+        return price
+    }
+
+    function calculateTotal(price, quantity) {
+        const total = parseFloat(price) * parseFloat(quantity)
+        return total
     }
 
     displayCartItems();
