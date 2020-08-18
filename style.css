@@ -549,6 +549,10 @@ footer p {
     #cart-icon2 {
         display: block;
     }
+
+    .mt10 {
+        margin-top: 10%;
+    }
 }
 
 /* Media Queries for Content Images */
@@ -865,15 +869,13 @@ footer p {
         overflow: hidden;
     }
 
-    .product-container {
+    .overflow{
         overflow: inherit;
     }
 
     #header-img {
         width: 40%;
     }
-
-
 
     #content-image-1 {
         height: 160px;
