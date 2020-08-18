@@ -17,14 +17,17 @@ $(document).ready(function () {
     $(document).on("click", ".add-to-cart-button", function () {
         const productName = $(".product-title").text();
         const quantityInput = $(".quantity-input").val();
-        const productImage = $(".cover-image").attr("src")
+        const productImage = $(".cover-image").attr("src");
+        const productURL = window.location.href
 
         if (quantityInput > 0) {
             const newProduct = {
                 name: productName,
                 quantity: quantityInput,
-                image: productImage
+                image: productImage,
+                URL: productURL
             }
+            console.log(newProduct)
 
             let cart;
 
@@ -75,7 +78,8 @@ $(document).ready(function () {
             const th = $('<th scope="row">');
             const removeButton = $('<button type="button" class="btn remove-button">X</button>');
             const tdImage = $('<img src="' + cartArray[i].image + '" class="cart-product-image">');
-            const tdTitle = $('<td class="cart-product-title">').text(cartArray[i].name);
+            const tdTitle = $('<td class="cart-product-title">')
+            const titleLink = $('<a href="' + cartArray[i].URL + '">').text(cartArray[i].name)
             const tdPrice = $('<td class="cart-product-price">').text(formatter.format(calculatePrice(cartArray[i].quantity)));
             const tdQuantity = $('<td><input type="number" class="cart-product-quantity" min="1" value="' + cartArray[i].quantity + '">');
             const tdTotal = $('<td class="cart-product-total">').text(formatter.format(calculateTotal(calculatePrice(cartArray[i].quantity), cartArray[i].quantity)));
@@ -85,6 +89,7 @@ $(document).ready(function () {
             tr.append(th);
             tr.append(tdImage);
             tr.append(tdTitle);
+            tdTitle.append(titleLink);
             tr.append(tdPrice);
             tr.append(tdQuantity);
             tr.append(tdTotal);
