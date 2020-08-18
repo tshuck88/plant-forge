@@ -119,12 +119,12 @@ $(document).ready(function () {
             default:
                 price = 37.95
         }
-        return price
+        return price;
     }
 
     function calculateTotal(price, quantity) {
-        const total = parseFloat(price) * parseFloat(quantity)
-        return total
+        const total = parseFloat(price) * parseFloat(quantity);
+        return total;
     }
 
     displayCartItems();
@@ -147,7 +147,8 @@ $(document).ready(function () {
         }
         sessionStorage.setItem("cart", JSON.stringify(cartArray));
         $("#cart-table").empty();
-        displayCartItems()
+        displayCartItems();
+        cartTotals();
 
     });
 
@@ -160,19 +161,13 @@ $(document).ready(function () {
         })
 
         const formattedTotals = totalsArr.map(price => Number(price.replace(/[^0-9.-]+/g, "")));
-        console.log(formattedTotals);
-        
         const subtotal = formattedTotals.reduce((a, b) => a + b);
         const shipping = 20;
         const total = subtotal + shipping;
 
-
-
         $("#subtotal-td").text(formatter.format(subtotal));
         $("#shipping-td").text(formatter.format(shipping));
         $("#total-td").text(formatter.format(total));
-
-
     }
 
     cartTotals();
