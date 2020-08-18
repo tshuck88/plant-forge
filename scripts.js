@@ -15,50 +15,45 @@ $(document).ready(function () {
     });
 
     $(document).on("click", ".add-to-cart-button", function () {
-        // const cardTitle = $(this).parent().siblings(".card-body").find(".card-title").text();
-        const productName = $(".product-title").text(); // || cardTitle;
+        const productName = $(".product-title").text();
         const quantityInput = $(".quantity-input").val();
         const productImage = $(".cover-image").attr("src")
 
-        // let quantity;
-        // if (quantityInput !== undefined) {
-        //     quantity = quantityInput;
-        // } else {
-        //     quantity = 1;
-        // }
-
-        const newProduct = {
-            name: productName,
-            quantity: quantityInput,
-            image: productImage
-        }
-
-        let cart;
-
-        if (sessionStorage.cart) {
-            cart = JSON.parse(sessionStorage.getItem("cart"));
-        } else {
-            cart = [];
-        }
-
-        function checkCart(arr, product) {
-            const findProduct = arr.filter(obj => { return obj.name === productName });
-
-            if (findProduct.length === 0) {
-                arr.push(product);
-            } else {
-                const cartItem = findProduct[0];
-                cartItem.quantity = parseInt(cartItem.quantity) + parseInt(product.quantity);
-                console.log(arr);
+        if (quantityInput > 0) {
+            const newProduct = {
+                name: productName,
+                quantity: quantityInput,
+                image: productImage
             }
-            sessionStorage.setItem("cart", JSON.stringify(arr));
+
+            let cart;
+
+            if (sessionStorage.cart) {
+                cart = JSON.parse(sessionStorage.getItem("cart"));
+            } else {
+                cart = [];
+            }
+
+            function checkCart(arr, product) {
+                const findProduct = arr.filter(obj => { return obj.name === productName });
+
+                if (findProduct.length === 0) {
+                    arr.push(product);
+                } else {
+                    const cartItem = findProduct[0];
+                    cartItem.quantity = parseInt(cartItem.quantity) + parseInt(product.quantity);
+                    console.log(arr);
+                }
+                sessionStorage.setItem("cart", JSON.stringify(arr));
+            }
+            checkCart(cart, newProduct)
         }
-        checkCart(cart, newProduct)
+
 
     });
 
-    const cartArray = [{ name: "plant1", quantity: 3, image: "https://via.placeholder.com/150" }, { name: "plant2", quantity: 43, image: "https://via.placeholder.com/150" }];
-    // const cartArray = JSON.parse(sessionStorage.getItem("cart")) || [];
+    // const cartArray = [{ name: "plant1", quantity: 3, image: "https://via.placeholder.com/150" }, { name: "plant2", quantity: 43, image: "https://via.placeholder.com/150" }];
+    const cartArray = JSON.parse(sessionStorage.getItem("cart")) || [];
     console.log(cartArray);
 
     function isCartEmpty() {
@@ -143,8 +138,12 @@ $(document).ready(function () {
 
         for (let i = 0; i < cartArray.length; i++) {
             cartArray[i].quantity = quantities[i];
-
+            if (cartArray[i].quantity === "0") {
+                cartArray.splice(i, 1);
+            }
         }
+
+        console.log(cartArray)
         sessionStorage.setItem("cart", JSON.stringify(cartArray));
         $("#cart-table").empty();
         displayCartItems();
@@ -160,17 +159,21 @@ $(document).ready(function () {
             totalsArr.push($(this).text())
         })
 
-        const formattedTotals = totalsArr.map(price => Number(price.replace(/[^0-9.-]+/g, "")));
-        const subtotal = formattedTotals.reduce((a, b) => a + b);
-        const shipping = 20;
-        const total = subtotal + shipping;
+        if (totalsArr !== []) {
+            const formattedTotals = totalsArr.map(price => Number(price.replace(/[^0-9.-]+/g, "")));
+            const subtotal = formattedTotals.reduce((a, b) => a + b);
+            const shipping = 20;
+            const total = subtotal + shipping;
 
-        $("#subtotal-td").text(formatter.format(subtotal));
-        $("#shipping-td").text(formatter.format(shipping));
-        $("#total-td").text(formatter.format(total));
+            $("#subtotal-td").text(formatter.format(subtotal));
+            $("#shipping-td").text(formatter.format(shipping));
+            $("#total-td").text(formatter.format(total));
+        }
+
     }
 
     cartTotals();
+
 
 });
 
