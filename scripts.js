@@ -62,7 +62,7 @@ $(document).ready(function () {
     // }
 
     // const cartArray = JSON.parse(sessionStorage.getItem("cart")) || [];
-    const cartArray = [{ name: "plant1", quantity: 4, image: "https://via.placeholder.com/150" }, { name: "plant2", quantity: 2, image: "https://via.placeholder.com/150" }];
+    const cartArray = [{ name: "plant1", quantity: 4, image: "https://via.placeholder.com/150" }, { name: "plant2", quantity: 100, image: "https://via.placeholder.com/150" }];
     console.log(cartArray);
 
     function isCartEmpty() {
@@ -84,7 +84,7 @@ $(document).ready(function () {
             const tdImage = $('<img src="' + cartArray[i].image + '" class="cart-product-image">');
             const tdTitle = $('<td class="cart-product-title">').text(cartArray[i].name);
             const tdPrice = $('<td class="cart-product-price">').text(formatter.format(calculatePrice(cartArray[i].quantity)));
-            const tdQuantity = $('<td><input type="number" class="cart-product-quantity" value="' + cartArray[i].quantity + '">');
+            const tdQuantity = $('<td><input type="number" class="cart-product-quantity" min="1" value="' + cartArray[i].quantity + '">');
             const tdTotal = $('<td class="cart-prouct-total">').text(formatter.format(calculateTotal(calculatePrice(cartArray[i].quantity), cartArray[i].quantity)));
 
             th.append(removeButton);
@@ -100,9 +100,10 @@ $(document).ready(function () {
     }
 
     function calculatePrice(quantity) {
+
         let price;
 
-        switch (quantity) {
+        switch (true) {
             case quantity >= 10 && quantity < 20:
                 price = 35.95;
                 break;
@@ -116,7 +117,7 @@ $(document).ready(function () {
                 price = 29.95;
                 break;
             case quantity >= 100:
-                price = 37.95;
+                price = 27.95;
                 break;
             default:
                 price = 37.95
@@ -134,14 +135,12 @@ $(document).ready(function () {
     $(document).on("click", ".remove-button", function () {
         const productName = $(this).parent().siblings(".cart-product-title").text();
         const itemIndex = cartArray.findIndex(obj => obj.name === productName);
-        console.log(itemIndex);
         cartArray.splice(itemIndex, 1);
-        console.log(cartArray)
         $(this).parents("tr").remove();
         sessionStorage.setItem("cart", JSON.stringify(cartArray));
         isCartEmpty();
-    })
+    });
 
 
-})
+});
 
