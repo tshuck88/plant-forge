@@ -119,10 +119,6 @@ nav ul a:hover,
     width: 200px;
 }
 
-#button-container a {
-    color: #ef4136
-}
-
 .logo-container {
     display: flex;
     justify-content: center;
