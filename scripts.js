@@ -57,7 +57,8 @@ $(document).ready(function () {
 
     });
 
-    const cartArray = JSON.parse(sessionStorage.getItem("cart")) || [];
+    const cartArray = [{ name: "plant1", quantity: 3, image: "https://via.placeholder.com/150" }, { name: "plant2", quantity: 43, image: "https://via.placeholder.com/150" }];
+    // const cartArray = JSON.parse(sessionStorage.getItem("cart")) || [];
     console.log(cartArray);
 
     function isCartEmpty() {
@@ -80,7 +81,7 @@ $(document).ready(function () {
             const tdTitle = $('<td class="cart-product-title">').text(cartArray[i].name);
             const tdPrice = $('<td class="cart-product-price">').text(formatter.format(calculatePrice(cartArray[i].quantity)));
             const tdQuantity = $('<td><input type="number" class="cart-product-quantity" min="1" value="' + cartArray[i].quantity + '">');
-            const tdTotal = $('<td class="cart-prouct-total">').text(formatter.format(calculateTotal(calculatePrice(cartArray[i].quantity), cartArray[i].quantity)));
+            const tdTotal = $('<td class="cart-product-total">').text(formatter.format(calculateTotal(calculatePrice(cartArray[i].quantity), cartArray[i].quantity)));
 
 
             th.append(removeButton);
@@ -144,10 +145,37 @@ $(document).ready(function () {
             cartArray[i].quantity = quantities[i];
 
         }
-        
+        sessionStorage.setItem("cart", JSON.stringify(cartArray));
         $("#cart-table").empty();
         displayCartItems()
 
-    })
+    });
+
+    function cartTotals() {
+        const productTotals = $(".cart-product-total");
+        const totalsArr = []
+
+        $(productTotals).each(function () {
+            totalsArr.push($(this).text())
+        })
+
+        const formattedTotals = totalsArr.map(price => Number(price.replace(/[^0-9.-]+/g, "")));
+        console.log(formattedTotals);
+        
+        const subtotal = formattedTotals.reduce((a, b) => a + b);
+        const shipping = 20;
+        const total = subtotal + shipping;
+
+
+
+        $("#subtotal-td").text(formatter.format(subtotal));
+        $("#shipping-td").text(formatter.format(shipping));
+        $("#total-td").text(formatter.format(total));
+
+
+    }
+
+    cartTotals();
+
 });
 
