@@ -157,9 +157,9 @@ $(document).ready(function () {
 
         $(productTotals).each(function () {
             totalsArr.push($(this).text())
-        })
+        });
 
-        if (totalsArr !== []) {
+        if (totalsArr.length !== 0) {
             const formattedTotals = totalsArr.map(price => Number(price.replace(/[^0-9.-]+/g, "")));
             const subtotal = formattedTotals.reduce((a, b) => a + b);
             const shipping = 20;
