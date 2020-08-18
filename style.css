@@ -372,7 +372,9 @@ footer p {
     color: #f7941d;
 }
 
-.table thead th, .table th, .table td {
+.table thead th,
+.table th,
+.table td {
     border: none;
 }
 
@@ -384,8 +386,13 @@ footer p {
     width: 75px;
 }
 
-.proceed-to-checkout-button {
+.proceed-to-checkout-button,
+.update-cart-button {
     width: 100%;
+}
+
+.update-cart-button {
+    margin-top: 15px;
 }
 
 /* Media Queries For SVG Header */

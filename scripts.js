@@ -57,12 +57,7 @@ $(document).ready(function () {
 
     });
 
-    // function getCartItems() {
-    //     return JSON.parse(sessionStorage.getItem("cart") || []);
-    // }
-
-    // const cartArray = JSON.parse(sessionStorage.getItem("cart")) || [];
-    const cartArray = [{ name: "plant1", quantity: 4, image: "https://via.placeholder.com/150" }, { name: "plant2", quantity: 100, image: "https://via.placeholder.com/150" }];
+    const cartArray = JSON.parse(sessionStorage.getItem("cart")) || [];
     console.log(cartArray);
 
     function isCartEmpty() {
@@ -86,6 +81,7 @@ $(document).ready(function () {
             const tdPrice = $('<td class="cart-product-price">').text(formatter.format(calculatePrice(cartArray[i].quantity)));
             const tdQuantity = $('<td><input type="number" class="cart-product-quantity" min="1" value="' + cartArray[i].quantity + '">');
             const tdTotal = $('<td class="cart-prouct-total">').text(formatter.format(calculateTotal(calculatePrice(cartArray[i].quantity), cartArray[i].quantity)));
+
 
             th.append(removeButton);
             tr.append(th);
@@ -141,6 +137,17 @@ $(document).ready(function () {
         isCartEmpty();
     });
 
+    $(document).on("click", ".update-cart-button", function () {
+        const quantities = $(".cart-product-quantity").map((i, e) => e.value).get();
 
+        for (let i = 0; i < cartArray.length; i++) {
+            cartArray[i].quantity = quantities[i];
+
+        }
+        
+        $("#cart-table").empty();
+        displayCartItems()
+
+    })
 });
 
