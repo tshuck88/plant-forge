@@ -366,6 +366,10 @@ footer p {
     max-width: 90vw;
 }
 
+#cart-message {
+    display: none;
+}
+
 /* Cart Page Styles */
 
 .table {

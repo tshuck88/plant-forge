@@ -46,7 +46,9 @@ $(document).ready(function () {
                 }
                 sessionStorage.setItem("cart", JSON.stringify(arr));
             }
-            checkCart(cart, newProduct)
+            checkCart(cart, newProduct);
+            $("#cart-message-product").text(newProduct.name);
+            $("#cart-message").css("display", "block")
         }
 
 
