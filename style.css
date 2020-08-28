@@ -120,6 +120,7 @@ nav ul a:hover,
 }
 
 .logo-container {
+    z-index: 1;
     display: flex;
     justify-content: center;
     position: relative;
