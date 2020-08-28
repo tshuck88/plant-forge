@@ -33,7 +33,7 @@ p {
 }
 
 header {
-    max-height: 150px;
+    height: 125px;
     background-image:
         url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="125" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon points="0,0 1000,0 1000,50 570,50 500,100 430,50 0,50" style="fill:%23240000;" /></svg>');
 
@@ -42,7 +42,7 @@ header {
 
 nav {
     position: relative;
-    bottom: 88px;
+    bottom: 93px;
 }
 
 #navbarSupportedContent {
@@ -73,7 +73,7 @@ nav ul a:hover,
     float: right;
     margin: 10px;
     position: relative;
-    bottom: 88px;
+    bottom: 93px;
     z-index: 1;
 }
 
@@ -106,6 +106,7 @@ nav ul a:hover,
 }
 
 #uspp-container {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     margin: 0 0 -40px;
@@ -118,11 +119,9 @@ nav ul a:hover,
     height: 40px;
 }
 
-/* #uspp {
-    height: 40px;
-    display: block;
-    margin: 0 auto 40px;
-} */
+#uspp {
+    display: none;
+}
 
 #header-text {
     position: relative;
@@ -144,7 +143,7 @@ nav ul a:hover,
     display: flex;
     justify-content: center;
     position: relative;
-    bottom: -15px;
+    bottom: -7px;
 }
 
 .logo-container a {
@@ -313,7 +312,7 @@ footer p {
     transform: rotate(180deg);
 }
 
-.w1920,
+/* .w1920,
 .w1440,
 .w1280,
 .w1080,
@@ -326,7 +325,7 @@ footer p {
 .w380,
 .w320 {
     display: none;
-}
+} */
 
 /* Buy Plant Forge Page Styles */
 
@@ -424,11 +423,15 @@ footer p {
 @media screen and (max-width: 640px) {
 
     #cart-icon2 {
-        bottom: 198px;
+        bottom: 68px;
     }
 
     .logo {
         height: 75px;
+    }
+
+    .logo-container {
+        bottom: -4px;
     }
 
     #footer-logo {
@@ -437,7 +440,7 @@ footer p {
     }
 
     nav {
-        bottom: 190px;
+        bottom: 68px;
     }
 
     #navbarSupportedContent {
@@ -453,7 +456,7 @@ footer p {
 @media screen and (max-width: 320px) {
     header {
         background-image:
-            url('data:image/svg+xml;utf8,        <svg xmlns="http://www.w3.org/2000/svg" class="w320" width="100%" height="125" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon points="0,0 1000,0 1000,50 675,50 500,75 325,50 0,50" style="fill:%23240000;" /></svg>');
+            url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="w320" width="100%" height="125" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon points="0,0 1000,0 1000,50 675,50 500,75 325,50 0,50" style="fill:%23240000;" /></svg>');
     }
 }
 
@@ -803,13 +806,20 @@ footer p {
         height: 100px;
     }
 
-    /* #us2,
+    #us2,
     #pp2 {
         display: block;
         margin: 10px auto;
-        height: 30px;
+        height: 25px;
         width: 200px;
-    } */
+    }
+
+
+    #uspp {
+        height: 20px;
+        display: block;
+        margin: 10px auto;
+    }
 
     #content-image-2 {
         height: 275px;
@@ -825,13 +835,13 @@ footer p {
         transform: scale(1.4) rotate(-10deg);
         left: -10px;
     }
+
+    .jumbotron {
+        padding-top: 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
-
-    #uspp {
-        height: 30px;
-    }
 
     .btn-lg {
         padding: .375rem .75rem;
@@ -905,8 +915,13 @@ footer p {
 
 @media screen and (max-width: 481px) {
 
+    #us2,
+    #pp2 {
+        height: 15px;
+    }
+
     #uspp {
-        height: 20px;
+        height: 15px;
     }
 
     #plant-img2,
