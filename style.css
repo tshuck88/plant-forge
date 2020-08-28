@@ -14,6 +14,7 @@ body {
     font-family: "Oswald", serif;
     color: #f7941d;
     font-size: 1.5rem;
+    line-height: 1.15;
 }
 
 main,
@@ -69,6 +70,7 @@ nav ul a:hover,
     margin: 10px;
     position: relative;
     bottom: 220px;
+    z-index: 1;
 }
 
 #header-img {
@@ -93,22 +95,36 @@ nav ul a:hover,
 }
 
 #plant-img2,
-#forge-img2 {
+#forge-img2,
+#us2,
+#pp2 {
     display: none;
 }
 
-#uspp {
+#uspp-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 -40px;
+    position: relative;
+    top: 365px;
+}
+
+#us, #pp {
+    height: 40px;
+}
+
+/* #uspp {
     height: 40px;
     display: block;
     margin: 0 auto 40px;
-}
+} */
 
 #header-text {
     position: relative;
     font-size: 2rem;
 }
 
-#button-container {
+/* #button-container {
     position: relative;
     bottom: 250px;
 }
@@ -117,14 +133,17 @@ nav ul a:hover,
 #button-container a {
     margin: 0 auto;
     width: 200px;
-}
+} */
 
 .logo-container {
-    z-index: 1;
     display: flex;
     justify-content: center;
     position: relative;
     bottom: 115px;
+}
+
+.logo-container a {
+    z-index: 1;
 }
 
 .logo {
@@ -641,6 +660,15 @@ footer p {
         top: 95px;
     }
 
+    #uspp-container {
+        margin: 0 0 -30px;
+        top: 365px;
+    }
+    
+    #us, #pp {
+        height: 30px;
+    }
+
     #content-image-1 {
         transform: scale(1.1);
         top: 0px;
@@ -743,7 +771,7 @@ footer p {
 
 @media screen and (max-width: 801px) {
 
-    #plant-forge-container {
+    #plant-forge-container, #uspp-container {
         display: none;
     }
 
@@ -758,6 +786,14 @@ footer p {
         margin: 10px auto;
         height: 100px;
     }
+
+    /* #us2,
+    #pp2 {
+        display: block;
+        margin: 10px auto;
+        height: 30px;
+        width: 200px;
+    } */
 
     #content-image-2 {
         height: 275px;
@@ -867,7 +903,7 @@ footer p {
     }
 
     .overflow{
-        overflow: inherit;
+        overflow: auto;
     }
 
     #header-img {
