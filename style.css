@@ -4,7 +4,7 @@ html {
     position: relative;
     min-height: 100%;
     /* scroll-padding-top: 125px; */
-    scroll-margin-top: 125px;
+    /* scroll-margin-top: 125px; */
 }
 
 body {
@@ -127,7 +127,22 @@ nav ul a:hover,
 #header-text {
     position: relative;
     font-size: 2rem;
+    /* scroll-padding-top: 125px; */
 }
+
+#goto {
+    margin-top: -125px;
+    padding-bottom: 125px;
+    display: block;
+    visibility: hidden;
+}
+
+/* #header-text:before {
+    display: block;
+    content: "";
+    height: 125px;
+    margin: -125px 0 0;
+} */
 
 .jumbotron {
     padding: 0;
@@ -437,63 +452,81 @@ footer p {
 }
 
 @media screen and (max-width: 320px) {
-    header, footer {
+
+    header,
+    footer {
         background-image:
             url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="w320" width="100%" height="125" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon points="0,0 1000,0 1000,50 675,50 500,75 325,50 0,50" style="fill:%23240000;" /></svg>');
     }
 }
 
 @media screen and (min-width: 321px) and (max-width: 380px) {
-    header, footer {
+
+    header,
+    footer {
         background-image:
             url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="w380" width="100%" height="125" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon points="0,0 1000,0 1000,50 660,50 500,75 340,50 0,50" style="fill:%23240000;" /></svg>');
     }
 }
 
 @media screen and (min-width: 381px) and (max-width: 470px) {
-    header, footer {
+
+    header,
+    footer {
         background-image:
             url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="w470" width="100%" height="125" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon points="0,0 1000,0 1000,50 640,50 500,75 360,50 0,50" style="fill:%23240000;" /></svg>');
     }
 }
 
 @media screen and (min-width: 471px) and (max-width: 560px) {
-    header, footer {
+
+    header,
+    footer {
         background-image:
             url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="w560" width="100%" height="125" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon points="0,0 1000,0 1000,50 620,50 500,75 380,50 0,50" style="fill:%23240000;" /></svg>');
     }
 }
 
 @media screen and (min-width: 561px) and (max-width: 640px) {
-    header, footer {
+
+    header,
+    footer {
         background-image:
             url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="w640" width="100%" height="125" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon points="0,0 1000,0 1000,50 600,50 500,75 400,50 0,50" style="fill:%23240000;" /></svg>');
     }
 }
 
 @media screen and (min-width: 641px) and (max-width: 720px) {
-    header, footer {
+
+    header,
+    footer {
         background-image:
             url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="w720" width="100%" height="125" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon points="0,0 1000,0 1000,50 660,50 500,100 340,50 0,50" style="fill:%23240000;" /></svg>');
     }
 }
 
 @media screen and (min-width: 721px) and (max-width: 800px) {
-    header, footer {
+
+    header,
+    footer {
         background-image:
             url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="w800" width="100%" height="125" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon points="0,0 1000,0 1000,50 640,50 500,100 360,50 0,50" style="fill:%23240000;" /></svg>');
     }
 }
 
 @media screen and (min-width: 801px) and (max-width: 940px) {
-    header, footer {
+
+    header,
+    footer {
         background-image:
             url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="w940" width="100%" height="125" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon points="0,0 1000,0 1000,50 620,50 500,100 380,50 0,50" style="fill:%23240000;" /></svg>');
     }
 }
 
 @media screen and (min-width: 941px) and (max-width: 1080px) {
-    header, footer {
+
+    header,
+    footer {
         background-image:
             url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="w1080" width="100%" height="125" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon points="0,0 1000,0 1000,50 605,50 500,100 395,50 0,50" style="fill:%23240000;" /></svg>');
     }
@@ -658,7 +691,7 @@ footer p {
     .jumbotron {
         padding: 1rem;
     }
-    
+
 
     #plant-img1,
     #forge-img1 {
@@ -785,7 +818,7 @@ footer p {
     .jumbotron {
         padding: 0;
     }
-    
+
 
     #plant-forge-container,
     #uspp-container {
@@ -869,10 +902,10 @@ footer p {
 
 @media screen and (max-width: 601px) {
 
-    html {
-        /* scroll-padding-top: 95px; */
+    /* html {
+        scroll-padding-top: 95px;
         scroll-margin-top: 95px;
-    }
+    } */
 
     h1 {
         font-size: 2.5rem;
