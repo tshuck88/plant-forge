@@ -126,6 +126,7 @@ nav ul a:hover,
 #header-text {
     position: relative;
     font-size: 2rem;
+    /* scroll-margin-top: 125px; */
 }
 
 .jumbotron {
@@ -868,9 +869,9 @@ footer p {
 
 @media screen and (max-width: 601px) {
 
-    /* html {
-        scroll-padding-top: 0px;
-    } */
+    html {
+        scroll-padding-top: 95px;
+    }
 
     h1 {
         font-size: 2.5rem;
@@ -939,12 +940,12 @@ footer p {
         height: 75px;
     }
 
-    .content-container {
+    /* .content-container {
         overflow: hidden;
-    }
+    } */
 
     .overflow {
-        overflow: auto;
+        overflow: hidden;
     }
 
     #header-img {
