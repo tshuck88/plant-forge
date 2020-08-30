@@ -868,9 +868,9 @@ footer p {
 
 @media screen and (max-width: 601px) {
 
-    html {
+    /* html {
         scroll-padding-top: 95px;
-    }
+    } */
 
     h1 {
         font-size: 2.5rem;
