@@ -3,8 +3,6 @@ html {
     padding: 0;
     position: relative;
     min-height: 100%;
-    /* scroll-padding-top: 125px; */
-    /* scroll-margin-top: 125px; */
 }
 
 body {
@@ -127,22 +125,14 @@ nav ul a:hover,
 #header-text {
     position: relative;
     font-size: 2rem;
-    /* scroll-padding-top: 125px; */
 }
 
-#goto {
+#about-plant-forge {
     margin-top: -125px;
     padding-bottom: 125px;
     display: block;
     visibility: hidden;
 }
-
-/* #header-text:before {
-    display: block;
-    content: "";
-    height: 125px;
-    margin: -125px 0 0;
-} */
 
 .jumbotron {
     padding: 0;
@@ -978,8 +968,8 @@ footer p {
         overflow: hidden;
     } */
 
-    .overflow {
-        overflow: auto;
+    .overflow-h {
+        overflow: hidden;
     }
 
     #header-img {
