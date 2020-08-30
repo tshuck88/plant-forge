@@ -14,6 +14,7 @@ body {
     font-family: "Oswald", serif;
     color: #f7941d;
     font-size: 1.5rem;
+    line-height: 1.15;
 }
 
 main,
@@ -125,19 +126,12 @@ nav ul a:hover,
 #header-text {
     position: relative;
     font-size: 2rem;
-    line-height: 1.15;
 }
 
-/* #button-container {
-    position: relative;
-    bottom: 250px;
+.jumbotron {
+    padding: 0;
+    margin: 0;
 }
-
-#button-container button,
-#button-container a {
-    margin: 0 auto;
-    width: 200px;
-} */
 
 .logo-container {
     display: flex;
@@ -656,6 +650,11 @@ footer p {
 
 @media screen and (max-width: 1025px) {
 
+    .jumbotron {
+        padding: 1rem;
+    }
+    
+
     #plant-img1,
     #forge-img1 {
         height: 75px;
@@ -777,6 +776,11 @@ footer p {
 
 @media screen and (max-width: 801px) {
 
+    .jumbotron {
+        padding: 0;
+    }
+    
+
     #plant-forge-container,
     #uspp-container {
         display: none;
@@ -824,9 +828,6 @@ footer p {
         left: -10px;
     }
 
-    .jumbotron {
-        padding-top: 0;
-    }
 }
 
 @media screen and (max-width: 768px) {
