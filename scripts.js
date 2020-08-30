@@ -65,6 +65,7 @@ $(document).ready(function () {
         if (cartArray.length === 0) {
             $(".table-responsive").css("display", "none");
             $("#empty-cart").append("<h2>Your cart is currently empty</h2>");
+            $("#subtotal-table").css("display", "none");
         }
     }
 
