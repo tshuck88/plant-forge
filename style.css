@@ -365,6 +365,7 @@ footer p {
 
 .quantity-input {
     width: 75px;
+    height: 42px;
 }
 
 .modal-image {
@@ -798,7 +799,8 @@ footer p {
         top: 0px;
     }
 
-    .add-to-cart-button {
+    .add-to-cart-button,
+    .quantity-input {
         height: 36px;
     }
 }
