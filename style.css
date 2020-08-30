@@ -3,7 +3,8 @@ html {
     padding: 0;
     position: relative;
     min-height: 100%;
-    scroll-padding-top: 125px;
+    /* scroll-padding-top: 125px; */
+    scroll-margin-top: 125px;
 }
 
 body {
@@ -126,7 +127,6 @@ nav ul a:hover,
 #header-text {
     position: relative;
     font-size: 2rem;
-    /* scroll-margin-top: 125px; */
 }
 
 .jumbotron {
@@ -870,7 +870,8 @@ footer p {
 @media screen and (max-width: 601px) {
 
     html {
-        scroll-padding-top: 95px;
+        /* scroll-padding-top: 95px; */
+        scroll-margin-top: 95px;
     }
 
     h1 {
@@ -945,7 +946,7 @@ footer p {
     } */
 
     .overflow {
-        overflow: hidden;
+        overflow: auto;
     }
 
     #header-img {
