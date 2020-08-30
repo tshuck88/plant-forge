@@ -869,7 +869,7 @@ footer p {
 @media screen and (max-width: 601px) {
 
     html {
-        scroll-padding-top: 95px;
+        scroll-padding-top: 0px;
     }
 
     h1 {
