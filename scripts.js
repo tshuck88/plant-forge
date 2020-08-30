@@ -104,22 +104,22 @@ $(document).ready(function () {
 
         switch (true) {
             case quantity >= 10 && quantity < 20:
-                price = 35.95;
+                price = 40.50;
                 break;
             case quantity >= 20 && quantity < 30:
-                price = 33.95;
+                price = 38.50;
                 break;
             case quantity >= 30 && quantity < 50:
-                price = 31.95;
+                price = 35.50;
                 break;
             case quantity >= 50 && quantity < 100:
-                price = 29.95;
+                price = 33.50;
                 break;
             case quantity >= 100:
-                price = 27.95;
+                price = 31.50;
                 break;
             default:
-                price = 37.95
+                price = 42.50
         }
         return price;
     }
