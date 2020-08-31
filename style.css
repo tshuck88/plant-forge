@@ -418,6 +418,10 @@ footer p {
 /* Media Queries For SVG Header */
 @media screen and (max-width: 640px) {
 
+    .mt0 {
+        margin-top: 0%;
+    }
+
     #cart-icon2 {
         bottom: 68px;
     }
@@ -597,9 +601,6 @@ footer p {
         display: block;
     }
 
-    .mt10 {
-        margin-top: 10%;
-    }
 }
 
 /* Media Queries for Content Images */
