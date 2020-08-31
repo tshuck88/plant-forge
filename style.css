@@ -340,6 +340,10 @@ footer p {
 
 /* Product Page Styles */
 
+.product-title-mobile {
+    display: none;
+}
+
 .main-product-image {
     display: block;
     background-color: white;
@@ -866,6 +870,14 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
+
+    .product-title-mobile {
+        display: block;
+    }
+
+    .product-title {
+        display: none;
+    }
 
     .btn-lg {
         padding: .375rem .75rem;
