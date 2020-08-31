@@ -3,6 +3,7 @@ html {
     padding: 0;
     position: relative;
     min-height: 100%;
+    /* scroll-padding-top: 125px; */
 }
 
 body {
@@ -70,7 +71,7 @@ nav ul a:hover,
 #cart-icon2 {
     display: none;
     float: right;
-    margin: 10px;
+    margin: 10px 10px 0 0;
     position: relative;
     bottom: 93px;
     z-index: 1;
@@ -317,10 +318,6 @@ footer p {
 
 /* Buy Plant Forge Page Styles */
 
-#card-container {
-    margin: 5% auto;
-}
-
 .card-body {
     padding: 1.25rem 1.25rem 0;
 }
@@ -333,6 +330,12 @@ footer p {
 
 .card {
     background-color: #333132;
+}
+
+.card-img-top {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Product Page Styles */
